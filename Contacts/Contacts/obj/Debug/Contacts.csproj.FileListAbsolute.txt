@@ -1,0 +1,16 @@
+S:\Users\wyatt\source\repos\Contacts\Contacts\bin\Debug\Contacts.exe.config
+S:\Users\wyatt\source\repos\Contacts\Contacts\bin\Debug\Contacts.exe
+S:\Users\wyatt\source\repos\Contacts\Contacts\bin\Debug\Contacts.pdb
+S:\Users\wyatt\source\repos\Contacts\Contacts\obj\Debug\Contacts.csprojAssemblyReference.cache
+S:\Users\wyatt\source\repos\Contacts\Contacts\obj\Debug\Contacts.Form1.resources
+S:\Users\wyatt\source\repos\Contacts\Contacts\obj\Debug\Contacts.Properties.Resources.resources
+S:\Users\wyatt\source\repos\Contacts\Contacts\obj\Debug\Contacts.csproj.GenerateResource.cache
+S:\Users\wyatt\source\repos\Contacts\Contacts\obj\Debug\Contacts.csproj.CoreCompileInputs.cache
+S:\Users\wyatt\source\repos\Contacts\Contacts\obj\Debug\Contacts.exe
+S:\Users\wyatt\source\repos\Contacts\Contacts\obj\Debug\Contacts.pdb
+S:\Users\wyatt\source\repos\Contacts\Contacts\bin\Debug\ContactDB.mdf
+S:\Users\wyatt\source\repos\Contacts\Contacts\bin\Debug\ContactDB_log.ldf
+S:\Users\wyatt\source\repos\Contacts\Contacts\bin\Debug\Contacts.exe.manifest
+S:\Users\wyatt\source\repos\Contacts\Contacts\bin\Debug\Contacts.application
+S:\Users\wyatt\source\repos\Contacts\Contacts\obj\Debug\Contacts.exe.manifest
+S:\Users\wyatt\source\repos\Contacts\Contacts\obj\Debug\Contacts.application
