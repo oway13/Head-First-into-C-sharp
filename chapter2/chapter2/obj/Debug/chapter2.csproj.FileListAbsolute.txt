@@ -1,0 +1,10 @@
+S:\Users\wyatt\source\repos\chapter2\chapter2\bin\Debug\chapter2.exe.config
+S:\Users\wyatt\source\repos\chapter2\chapter2\bin\Debug\chapter2.exe
+S:\Users\wyatt\source\repos\chapter2\chapter2\bin\Debug\chapter2.pdb
+S:\Users\wyatt\source\repos\chapter2\chapter2\obj\Debug\chapter2.csprojAssemblyReference.cache
+S:\Users\wyatt\source\repos\chapter2\chapter2\obj\Debug\chapter2.Form1.resources
+S:\Users\wyatt\source\repos\chapter2\chapter2\obj\Debug\chapter2.Properties.Resources.resources
+S:\Users\wyatt\source\repos\chapter2\chapter2\obj\Debug\chapter2.csproj.GenerateResource.cache
+S:\Users\wyatt\source\repos\chapter2\chapter2\obj\Debug\chapter2.csproj.CoreCompileInputs.cache
+S:\Users\wyatt\source\repos\chapter2\chapter2\obj\Debug\chapter2.exe
+S:\Users\wyatt\source\repos\chapter2\chapter2\obj\Debug\chapter2.pdb
