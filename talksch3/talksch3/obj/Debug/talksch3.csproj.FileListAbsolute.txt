@@ -1,0 +1,10 @@
+S:\Users\wyatt\source\repos\talksch3\talksch3\bin\Debug\talksch3.exe.config
+S:\Users\wyatt\source\repos\talksch3\talksch3\bin\Debug\talksch3.exe
+S:\Users\wyatt\source\repos\talksch3\talksch3\bin\Debug\talksch3.pdb
+S:\Users\wyatt\source\repos\talksch3\talksch3\obj\Debug\talksch3.csprojAssemblyReference.cache
+S:\Users\wyatt\source\repos\talksch3\talksch3\obj\Debug\talksch3.Form1.resources
+S:\Users\wyatt\source\repos\talksch3\talksch3\obj\Debug\talksch3.Properties.Resources.resources
+S:\Users\wyatt\source\repos\talksch3\talksch3\obj\Debug\talksch3.csproj.GenerateResource.cache
+S:\Users\wyatt\source\repos\talksch3\talksch3\obj\Debug\talksch3.csproj.CoreCompileInputs.cache
+S:\Users\wyatt\source\repos\talksch3\talksch3\obj\Debug\talksch3.exe
+S:\Users\wyatt\source\repos\talksch3\talksch3\obj\Debug\talksch3.pdb
