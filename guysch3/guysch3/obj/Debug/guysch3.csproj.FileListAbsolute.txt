@@ -1,0 +1,10 @@
+S:\Users\wyatt\source\repos\guysch3\guysch3\obj\Debug\guysch3.csprojAssemblyReference.cache
+S:\Users\wyatt\source\repos\guysch3\guysch3\obj\Debug\guysch3.Form1.resources
+S:\Users\wyatt\source\repos\guysch3\guysch3\obj\Debug\guysch3.Properties.Resources.resources
+S:\Users\wyatt\source\repos\guysch3\guysch3\obj\Debug\guysch3.csproj.GenerateResource.cache
+S:\Users\wyatt\source\repos\guysch3\guysch3\obj\Debug\guysch3.csproj.CoreCompileInputs.cache
+S:\Users\wyatt\source\repos\guysch3\guysch3\bin\Debug\guysch3.exe.config
+S:\Users\wyatt\source\repos\guysch3\guysch3\bin\Debug\guysch3.exe
+S:\Users\wyatt\source\repos\guysch3\guysch3\bin\Debug\guysch3.pdb
+S:\Users\wyatt\source\repos\guysch3\guysch3\obj\Debug\guysch3.exe
+S:\Users\wyatt\source\repos\guysch3\guysch3\obj\Debug\guysch3.pdb
