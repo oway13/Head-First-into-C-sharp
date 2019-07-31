@@ -1,0 +1,10 @@
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\bin\Debug\ReimbursementCh4.exe.config
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\bin\Debug\ReimbursementCh4.exe
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\bin\Debug\ReimbursementCh4.pdb
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\obj\Debug\ReimbursementCh4.csprojAssemblyReference.cache
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\obj\Debug\ReimbursementCh4.Form1.resources
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\obj\Debug\ReimbursementCh4.Properties.Resources.resources
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\obj\Debug\ReimbursementCh4.csproj.GenerateResource.cache
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\obj\Debug\ReimbursementCh4.csproj.CoreCompileInputs.cache
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\obj\Debug\ReimbursementCh4.exe
+S:\Users\wyatt\source\repos\ReimbursementCh4\ReimbursementCh4\obj\Debug\ReimbursementCh4.pdb
