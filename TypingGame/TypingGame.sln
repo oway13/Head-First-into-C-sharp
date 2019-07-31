@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypingGame", "TypingGame\TypingGame.csproj", "{21542D3B-D56B-42DF-A7B2-FCA5E9692A2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21542D3B-D56B-42DF-A7B2-FCA5E9692A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21542D3B-D56B-42DF-A7B2-FCA5E9692A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21542D3B-D56B-42DF-A7B2-FCA5E9692A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21542D3B-D56B-42DF-A7B2-FCA5E9692A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {831AF999-FAAE-48E1-994C-080B9BD4224B}
+	EndGlobalSection
+EndGlobal

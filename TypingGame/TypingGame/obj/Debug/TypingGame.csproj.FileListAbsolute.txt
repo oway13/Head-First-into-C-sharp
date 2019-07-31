@@ -1,0 +1,10 @@
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\obj\Debug\TypingGame.csprojAssemblyReference.cache
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\obj\Debug\TypingGame.Form1.resources
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\obj\Debug\TypingGame.Properties.Resources.resources
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\obj\Debug\TypingGame.csproj.GenerateResource.cache
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\obj\Debug\TypingGame.csproj.CoreCompileInputs.cache
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\bin\Debug\TypingGame.exe.config
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\bin\Debug\TypingGame.exe
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\bin\Debug\TypingGame.pdb
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\obj\Debug\TypingGame.exe
+S:\Users\wyatt\source\repos\TypingGame\TypingGame\obj\Debug\TypingGame.pdb
