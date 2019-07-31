@@ -1,0 +1,10 @@
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\bin\Debug\MenuCh4.exe.config
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\bin\Debug\MenuCh4.exe
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\bin\Debug\MenuCh4.pdb
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\obj\Debug\MenuCh4.csprojAssemblyReference.cache
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\obj\Debug\MenuCh4.Form1.resources
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\obj\Debug\MenuCh4.Properties.Resources.resources
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\obj\Debug\MenuCh4.csproj.GenerateResource.cache
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\obj\Debug\MenuCh4.csproj.CoreCompileInputs.cache
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\obj\Debug\MenuCh4.exe
+S:\Users\wyatt\source\repos\MenuCh4\MenuCh4\obj\Debug\MenuCh4.pdb
