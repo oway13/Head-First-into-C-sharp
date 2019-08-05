@@ -13,14 +13,19 @@ namespace PartyPlannerCh5
         public int NumberOfPeople;
         public decimal CostOfBeveragesPerPerson;
         public decimal CostOfDecorations;
-        public bool healthyOption;
-        public bool fancyOption;
 
         public void SetHealthyOption(bool healthyOption) {
-            this.healthyOption = healthyOption;
+            if (healthyOption)
+            {
+                CostOfBeveragesPerPerson = 5M;
+            }
+            else
+            {
+                CostOfBeveragesPerPerson = 20M;
+            }
         }
 
-        public void CalculateCostOfDecorations()
+        public void CalculateCostOfDecorations(bool fancyOption)
         {
             if (fancyOption)
             {
@@ -33,17 +38,16 @@ namespace PartyPlannerCh5
         }
 
 
-        public decimal CalculateCost()
+        public decimal CalculateCost(bool healthyOption)
         {
+            decimal totalCost = (CostOfBeveragesPerPerson + COST_OF_FOOD_PER_PERSON) * NumberOfPeople + CostOfDecorations;
             if (healthyOption)
             {
-                CostOfBeveragesPerPerson = 5M;
-                return ((CostOfBeveragesPerPerson+COST_OF_FOOD_PER_PERSON) * NumberOfPeople + CostOfDecorations)*0.95M;
+                return totalCost*0.95M;
             }
             else
             {
-                CostOfBeveragesPerPerson = 20M;
-                return (CostOfBeveragesPerPerson + COST_OF_FOOD_PER_PERSON) * NumberOfPeople + CostOfDecorations;
+                return totalCost;
             }
         }
     }
