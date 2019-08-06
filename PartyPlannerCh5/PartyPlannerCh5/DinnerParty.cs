@@ -10,9 +10,32 @@ namespace PartyPlannerCh5
     {
         public const int COST_OF_FOOD_PER_PERSON = 25;
 
-        public int NumberOfPeople;
+        private int numberOfPeople;
+        public int NumberOfPeople {
+            get
+            {
+                return numberOfPeople;
+            }
+
+            set
+            {
+                numberOfPeople = value;
+                CalculateCostOfDecorations(fancyDecor);
+            }
+        }
+
         public decimal CostOfBeveragesPerPerson;
         public decimal CostOfDecorations;
+        private bool fancyDecor;
+
+        public DinnerParty(int numberOfPeople, bool healthyOption, bool fancyDecor)
+        {
+            this.numberOfPeople = numberOfPeople;
+            this.fancyDecor = fancyDecor;
+            SetHealthyOption(healthyOption);
+            CalculateCostOfDecorations(fancyDecor);
+
+        }
 
         public void SetHealthyOption(bool healthyOption) {
             if (healthyOption)
@@ -27,6 +50,7 @@ namespace PartyPlannerCh5
 
         public void CalculateCostOfDecorations(bool fancyOption)
         {
+            fancyDecor = fancyOption;
             if (fancyOption)
             {
                 CostOfDecorations = 15M * NumberOfPeople + 50M;

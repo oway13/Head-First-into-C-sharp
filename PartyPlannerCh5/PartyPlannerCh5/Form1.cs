@@ -16,7 +16,7 @@ namespace PartyPlannerCh5
         public Form1()
         {
             InitializeComponent();
-            dinnerParty = new DinnerParty() { NumberOfPeople = 5 };
+            dinnerParty = new DinnerParty((int)numericUpDown1.Value, checkBox2.Checked, checkBox1.Checked);
             dinnerParty.SetHealthyOption(checkBox2.Checked);
             dinnerParty.CalculateCostOfDecorations(checkBox1.Checked);
             DisplayDinnerPartyCost();
