@@ -12,10 +12,34 @@ namespace HiveManagerCh6
 {
     public partial class Form1 : Form
     {
+        Queen queen;
         public Form1()
         {
             InitializeComponent();
             Worker[] workers = new Worker[4];
+            workers[0] = new Worker(new string[] { "Nectar Collector", "Honey Manufacturing" });
+            workers[1] = new Worker(new string[] { "Egg Care", "Baby Bee Tutoring" });
+            workers[2] = new Worker(new string[] { "Hive Maintenance", "Sting Patrol" });
+            workers[3] = new Worker(new string[] { "Nectar Collector", "Honey Manufacturing",
+                "Egg Care", "Baby Bee Tutoring", "Hive Maintenance", "Sting Patrol" });
+            queen = new Queen(workers);
+        }
+
+        private void assignButton_Click(object sender, EventArgs e)
+        {
+            if(queen.AssignWork(workerBeeJob.Text, (int)shifts.Value) == false)
+            {
+                MessageBox.Show("No workers are available to do the job '" + workerBeeJob.Text + "'", "The queen bee says...");
+            }
+            else
+            {
+                MessageBox.Show("The job '" + workerBeeJob.Text + "' will be done in " + shifts.Value + " shifts", "The queen bee says...");
+            }
+        }
+
+        private void nextShift_Click(object sender, EventArgs e)
+        {
+            report.Text = queen.WorkTheNextShift();
         }
     }
 }

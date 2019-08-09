@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.workerBeeJob = new System.Windows.Forms.ComboBox();
-            this.shifts = new System.Windows.Forms.NumericUpDown();
             this.assignButton = new System.Windows.Forms.Button();
+            this.shifts = new System.Windows.Forms.NumericUpDown();
+            this.workerBeeJob = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.nextShift = new System.Windows.Forms.Button();
             this.report = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -54,39 +54,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Worker Bee Assignments";
             // 
-            // label1
+            // assignButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Worker Bee Job";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(146, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Shifts";
-            // 
-            // workerBeeJob
-            // 
-            this.workerBeeJob.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.workerBeeJob.FormattingEnabled = true;
-            this.workerBeeJob.Items.AddRange(new object[] {
-            "Nectar Collector",
-            "Egg Care",
-            "Hive Maintenance",
-            "Baby Bee Tutoring",
-            "Honey Manufacturing",
-            "Sting Patrol"});
-            this.workerBeeJob.Location = new System.Drawing.Point(7, 33);
-            this.workerBeeJob.Name = "workerBeeJob";
-            this.workerBeeJob.Size = new System.Drawing.Size(126, 21);
-            this.workerBeeJob.TabIndex = 2;
+            this.assignButton.Location = new System.Drawing.Point(6, 60);
+            this.assignButton.Name = "assignButton";
+            this.assignButton.Size = new System.Drawing.Size(207, 23);
+            this.assignButton.TabIndex = 4;
+            this.assignButton.Text = "Assign this job to a bee";
+            this.assignButton.UseVisualStyleBackColor = true;
+            this.assignButton.Click += new System.EventHandler(this.assignButton_Click);
             // 
             // shifts
             // 
@@ -110,14 +86,39 @@
             0,
             0});
             // 
-            // assignButton
+            // workerBeeJob
             // 
-            this.assignButton.Location = new System.Drawing.Point(6, 60);
-            this.assignButton.Name = "assignButton";
-            this.assignButton.Size = new System.Drawing.Size(207, 23);
-            this.assignButton.TabIndex = 4;
-            this.assignButton.Text = "Assign this job to a bee";
-            this.assignButton.UseVisualStyleBackColor = true;
+            this.workerBeeJob.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.workerBeeJob.FormattingEnabled = true;
+            this.workerBeeJob.Items.AddRange(new object[] {
+            "Nectar Collector",
+            "Egg Care",
+            "Hive Maintenance",
+            "Baby Bee Tutoring",
+            "Honey Manufacturing",
+            "Sting Patrol"});
+            this.workerBeeJob.Location = new System.Drawing.Point(7, 33);
+            this.workerBeeJob.Name = "workerBeeJob";
+            this.workerBeeJob.Size = new System.Drawing.Size(126, 21);
+            this.workerBeeJob.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(146, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Shifts";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Worker Bee Job";
             // 
             // nextShift
             // 
@@ -127,6 +128,7 @@
             this.nextShift.TabIndex = 2;
             this.nextShift.Text = "Work the next shift";
             this.nextShift.UseVisualStyleBackColor = true;
+            this.nextShift.Click += new System.EventHandler(this.nextShift_Click);
             // 
             // report
             // 
