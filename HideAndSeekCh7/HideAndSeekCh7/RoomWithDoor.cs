@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HideAndSeekCh7
 {
-    class RoomWithDoor : Room, IHasExteriorDoor
+    class RoomWithDoor : RoomWithHidingPlace, IHasExteriorDoor
     {
-        public RoomWithDoor(string name, string Decoration, string DoorDescription) : base(name, Decoration)
+        public RoomWithDoor(string name, string Decoration, string HidingPlace, string DoorDescription) : base(name, Decoration, HidingPlace)
         {
             this.doorDescription = DoorDescription;
         }
