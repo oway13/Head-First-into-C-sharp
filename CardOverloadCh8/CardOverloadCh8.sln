@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardOverloadCh8", "CardOverloadCh8\CardOverloadCh8.csproj", "{2BE82F55-A632-45A3-B758-881A814A8B38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BE82F55-A632-45A3-B758-881A814A8B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BE82F55-A632-45A3-B758-881A814A8B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BE82F55-A632-45A3-B758-881A814A8B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BE82F55-A632-45A3-B758-881A814A8B38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8D8EB9C-0E91-4D96-99C7-6DDD6A4AD483}
+	EndGlobalSection
+EndGlobal
