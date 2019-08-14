@@ -51,33 +51,101 @@ namespace GoFishCh8
                     players[0].AskForACard(players, 0, stock, playerVal);
                 else
                     players[i].AskForACard(players, i, stock);
-
-                while (PullOutbooks(players[0]))
+                if(PullOutBooks(players[i]))
                 {
-                    for (int i = 0; i < 5; i++)
+                    textBoxOnForm.Text += players[i].Name + " drew a new hand" + Environment.NewLine;
+                    int card = 1;
+                    while (card <= 5 && stock.Count > 0)
                     {
-                        if (stock.Peek(0) != null)
-                            players[0].TakeCard(stock.Deal());
-                        else
-                        {
-                            PullOutbooks(players[0]);
-                            return true;
-                        }
+                        players[i].TakeCard(stock.Deal());
+                        card++;
                     }
                 }
+                players[0].SortHand();
+                if (stock.Count == 0)
+                {
+                    textBoxOnForm.Text = "The stock is out of cards. Game over!" + Environment.NewLine;
+                    return true;
+                }
             }
-            //TODO
             return false;
         }
 
-        public bool PullOutbooks(Player player)
+        public bool PullOutBooks(Player player)
         {
-            player.PullOutBooks();
+            List<Values> booksPulled = (List<Values>)player.PullOutBooks();
+            foreach(Values bookValue in booksPulled)
+            {
+                books.Add(bookValue, player);
+            }
+
             if (player.CardCount == 0)
                 return true;
             return false;
         }
+
+        public string DescribeBooks()
+        {
+            string returnString = "";
+            foreach (KeyValuePair<Values, Player> entry in books)
+                returnString += entry.Value.Name + " has a book of " + Card.Plural(entry.Key) + Environment.NewLine;
+            return returnString;
+        }
+
+        public string GetWinnerName()
+        {
+            Dictionary<string, int> scores = new Dictionary<string, int>();
+            foreach(Player player in players)
+            {
+                scores.Add(player.Name, 0);
+            }
+            foreach (Values value in books.Keys)
+            {
+                scores[books[value].Name]++;
+            }
+
+            int highScore = scores.Values.Max();
+            List<string> winners = new List<string>();
+            foreach (string playerName in scores.Keys)
+            {
+                if (scores[playerName] == highScore)
+                    winners.Add(playerName);
+            }
+            if (winners.Count == 1)
+            {
+                return winners[0] + " with " + scores[winners[0]] + " books." + Environment.NewLine;
+            }
+            else
+            {
+                string returnString = "A tie between ";
+                for(int i = 0; i < winners.Count; i++)
+                {
+                    returnString += winners[i] + " and ";
+                }
+                returnString = returnString.Substring(0, returnString.Length - 5);
+                returnString += " with " + scores[winners[0]] + " books" + Environment.NewLine;
+                return returnString;
+            }
+        }
+
+        public IEnumerable<string> GetPlayerCardNames()
+        {
+            return players[0].GetCardNames();
+        }
+
+        public string DescribePlayerHands()
+        {
+            string description = "";
+            for (int i = 0; i < players.Count; i++)
+            {
+                description += players[i].Name + " has " +players[i].CardCount;
+                if (players[i].CardCount == 1)
+                    description += " card." +Environment.NewLine;
+                else
+                    description += " cards." +Environment.NewLine; }
+            description += "The stock has " +stock.Count + " cards left.";
+            return description;
+        }
     }
 }
 
-//new List<Player> { players[], players[] }

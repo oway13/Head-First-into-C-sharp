@@ -17,7 +17,6 @@ namespace GoFishCh8
     enum Values
     {
         Ace = 1,
-        One,
         Two,
         Three,
         Four,

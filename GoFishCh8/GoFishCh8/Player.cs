@@ -20,9 +20,6 @@ namespace GoFishCh8
             this.name = name;
             this.random = random;
             this.textBoxOnForm = textBoxOnForm;
-            
-            //Something with the Deck for the player's initial hand
-            //Initialize as empty list
             this.cards = new Deck(new List<Card>());
 
             textBoxOnForm.Text += name + " has just joined the game" + Environment.NewLine;
@@ -31,20 +28,17 @@ namespace GoFishCh8
         public IEnumerable<Values> PullOutBooks()
         {
             List<Values> books = new List<Values>();
-            for (int i = 1; i < 13; i++)
+            for (int i = 1; i <= 13; i++)
             {
                 Values value = (Values)i;
                 int howMany = 0;
                 for (int card = 0; card < cards.Count; card++)
-                {
                     if (cards.Peek(card).value == value)
                         howMany++;
-                }
-                if(howMany == 4)
+                if (howMany == 4)
                 {
                     books.Add(value);
-                    for (int card = cards.Count - 1; card >= 0; card--)
-                        cards.Deal(card);
+                    cards.PullOutValues(value);
                 }
             }
             return books;
@@ -58,14 +52,10 @@ namespace GoFishCh8
 
         public Deck DoYouHaveAny(Values value)
         {
-            Deck deckToReturn = cards.PullOutValues(value);
-            string cardVal;
-            if (deckToReturn.Count > 1)
-                cardVal = Card.Plural(value);
-            else
-                cardVal = value.ToString();
-            textBoxOnForm.Text += Name + "has " + deckToReturn.Count + " " + cardVal + Environment.NewLine;
-            return deckToReturn;
+            Deck cardsIHave = cards.PullOutValues(value);
+            textBoxOnForm.Text += Name + " has " + cardsIHave.Count + " "
+                   + Card.Plural(value) + Environment.NewLine;
+            return cardsIHave;
         }
 
         public void AskForACard(List<Player> players, int myIndex, Deck stock, Values value)
@@ -79,7 +69,10 @@ namespace GoFishCh8
                 {
                     playerDeck = players[i].DoYouHaveAny(value);
                     howMany += playerDeck.Count;
-                    cards.Add(playerDeck);
+                    while (playerDeck.Count > 0)
+                    {
+                        cards.Add(playerDeck.Deal());
+                    }
                 }
                 
             }

@@ -115,7 +115,7 @@ namespace GoFishCh8
                 if (card.value == value)
                     NumberOfCards++;
             }
-            return NumberOfCards == 4;
+            return (NumberOfCards == 4);
         }
 
         public void SortByValue()
