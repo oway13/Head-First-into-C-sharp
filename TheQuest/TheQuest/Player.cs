@@ -7,44 +7,67 @@ using System.Threading.Tasks;
 
 namespace TheQuest
 {
-    class Player
+    class Player : Mover
     {
-        private Game game;
-        private Point point;
 
-        public Player(Game game, Point point)
+        public Player(Game game, Point point) :base(game, point)
         {
-            this.game = game;
-            this.point = point;
+            hitPoints = 10;
         }
 
-        public List<String> Weapons { get; internal set; }
-        public int HitPoints { get; internal set; }
-        public Point Location { get; internal set; }
+        private int hitPoints;
+        public int HitPoints { get { return hitPoints; } }
+        private Weapon equippedWeapon;
+        private List<Weapon> inventory = new List<Weapon>();
+        public List<String> Weapons
+        {
+            get
+            {
+                List<string> names = new List<string>();
+                foreach (Weapon weapon in inventory)
+                    names.Add(weapon.Name);
+                return names;
+            }
+        }
+
 
         public void Equip(string weaponName)
+        {
+            foreach(Weapon weapon in inventory)
+            {
+                if (weapon.Name == weaponName)
+                    equippedWeapon = weapon;
+            }
+        }
+
+        public  void Hit(int maxDamage, Random random)
+        {
+            hitPoints -= random.Next(1, maxDamage);
+        }
+
+        internal void IncreaseHealth(int health, Random random)
+        {
+            hitPoints += random.Next(1, health);
+        }
+
+
+        internal void Attack(Direction direction, Random random)
         {
             throw new NotImplementedException();
         }
 
         public void Move(Direction direction)
         {
-            throw new NotImplementedException();
-        }
-
-        public  void Hit(int maxDamage, Random random)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void IncreaseHealth(int health, Random random)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void Attack(Direction direction, Random random)
-        {
-            throw new NotImplementedException();
+            base.location = Move(direction, game.Boundaries);
+            if (!game.WeaponInRoom.PickedUp)
+            {
+                if(base.Nearby(game.WeaponInRoom.Location, 1))
+                {
+                    inventory.Add(game.WeaponInRoom);
+                    if(inventory.Count == 1)
+                        Equip(game.WeaponInRoom.Name);
+                }
+            }
         }
     }
 }
