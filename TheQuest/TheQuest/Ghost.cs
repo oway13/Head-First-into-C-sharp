@@ -9,13 +9,17 @@ namespace TheQuest
 {
     class Ghost : Enemy
     {
-        private Game game;
-        private Point point;
-
-        public Ghost(Game game, Point point)
+        public Ghost(Game game, Point location) : base(game, location, 8)
         {
-            this.game = game;
-            this.point = point;
+        }
+
+        public override void Move(Random random)
+        {
+            if (random.Next(2) == 0)
+                base.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
+
+            if (base.Nearby(game.PlayerLocation, 10) && HitPoints > 0)
+                game.HitPlayer(3, random);
         }
     }
 }

@@ -9,13 +9,17 @@ namespace TheQuest
 {
     class Ghoul : Enemy
     {
-        private Game game;
-        private Point point;
-
-        public Ghoul(Game game, Point point)
+        public Ghoul(Game game, Point location) : base(game, location, 10)
         {
-            this.game = game;
-            this.point = point;
+        }
+
+        public override void Move(Random random)
+        {
+            if (random.Next(2) != 0)
+                base.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
+
+            if (base.Nearby(game.PlayerLocation, 10) && HitPoints > 0)
+                game.HitPlayer(4, random);
         }
     }
 }

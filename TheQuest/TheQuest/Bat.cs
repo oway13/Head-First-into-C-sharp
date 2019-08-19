@@ -9,13 +9,20 @@ namespace TheQuest
 {
     class Bat : Enemy
     {
-        private Game game;
-        private Point point;
 
-        public Bat(Game game, Point point)
+        public Bat(Game game, Point location) : base(game, location, 6)
         {
-            this.game = game;
-            this.point = point;
+        }
+
+        public override void Move(Random random)
+        {
+            if(random.Next(1) == 0)
+                base.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
+            else
+                base.Move((Direction)random.Next(4), game.Boundaries);
+
+            if (base.Nearby(game.PlayerLocation, 10) && HitPoints > 0)
+                game.HitPlayer(2, random);
         }
     }
 }

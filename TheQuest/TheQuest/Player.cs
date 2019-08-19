@@ -45,15 +45,27 @@ namespace TheQuest
             hitPoints -= random.Next(1, maxDamage);
         }
 
-        internal void IncreaseHealth(int health, Random random)
+        public void IncreaseHealth(int health, Random random)
         {
             hitPoints += random.Next(1, health);
         }
 
 
-        internal void Attack(Direction direction, Random random)
+        public void Attack(Direction direction, Random random)
         {
-            throw new NotImplementedException();
+            if (equippedWeapon == null)
+                return;
+            if(equippedWeapon is IPotion)
+            {
+                IPotion equippedPotion = equippedWeapon as IPotion;
+                equippedPotion.Attack();
+                inventory.Remove(equippedWeapon);
+                equippedWeapon = null;
+            }
+            else
+            {
+                equippedWeapon.Attack();
+            }
         }
 
         public void Move(Direction direction)
