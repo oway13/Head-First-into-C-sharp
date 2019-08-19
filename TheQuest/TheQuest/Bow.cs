@@ -9,13 +9,15 @@ namespace TheQuest
 {
     class Bow : Weapon
     {
-        private Game game;
-        private Point point;
-
-        public Bow(Game game, Point point)
+        public Bow(Game game, Point location) : base(game, location)
         {
-            this.game = game;
-            this.point = point;
+        }
+
+        public override string Name { get { return "bow"; } }
+
+        public override void Attack(Direction direction, Random random)
+        {
+            DamageEnemy(direction, 30, 1, random);
         }
     }
 }
