@@ -57,14 +57,13 @@ namespace TheQuest
                 return;
             if(equippedWeapon is IPotion)
             {
-                IPotion equippedPotion = equippedWeapon as IPotion;
-                equippedPotion.Attack();
+                equippedWeapon.Attack(direction, random);
                 inventory.Remove(equippedWeapon);
                 equippedWeapon = null;
             }
             else
             {
-                equippedWeapon.Attack();
+                equippedWeapon.Attack(direction, random);
             }
         }
 
@@ -73,9 +72,10 @@ namespace TheQuest
             base.location = Move(direction, game.Boundaries);
             if (!game.WeaponInRoom.PickedUp)
             {
-                if(base.Nearby(game.WeaponInRoom.Location, 1))
+                if(base.Nearby(game.WeaponInRoom.Location, MoveInterval))
                 {
                     inventory.Add(game.WeaponInRoom);
+                    game.WeaponInRoom.PickUpWeapon();
                     if(inventory.Count == 1)
                         Equip(game.WeaponInRoom.Name);
                 }

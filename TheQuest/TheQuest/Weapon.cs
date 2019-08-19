@@ -16,7 +16,7 @@ namespace TheQuest
 
         public abstract string Name { get; }
         private bool pickedUp;
-        public bool PickedUp { get { return PickedUp; } }
+        public bool PickedUp { get { return pickedUp; } }
 
         public void PickUpWeapon() { pickedUp = true; }
 

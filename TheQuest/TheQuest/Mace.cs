@@ -20,44 +20,44 @@ namespace TheQuest
             switch (direction)
             {
                 case Direction.Up:
-                    if (DamageEnemy(direction, 20, 6, random))
+                    if (DamageEnemy(direction, MoveInterval*2, 6, random))
                         return;
-                    else if (DamageEnemy(Direction.Right, 20, 6, random))
+                    else if (DamageEnemy(Direction.Right, MoveInterval*2, 6, random))
                         return;
-                    else if (DamageEnemy(Direction.Down, 20, 6, random))
+                    else if (DamageEnemy(Direction.Down, MoveInterval*2, 6, random))
                         return;
                     else
-                        DamageEnemy(Direction.Left, 20, 6, random);
+                        DamageEnemy(Direction.Left, MoveInterval*2, 6, random);
                     break;
                 case Direction.Left:
-                    if (DamageEnemy(direction, 20, 6, random))
+                    if (DamageEnemy(direction, MoveInterval*2, 6, random))
                         return;
-                    else if (DamageEnemy(Direction.Up, 20, 6, random))
+                    else if (DamageEnemy(Direction.Up, MoveInterval*2, 6, random))
                         return;
-                    else if (DamageEnemy(Direction.Right, 20, 6, random))
+                    else if (DamageEnemy(Direction.Right, MoveInterval*2, 6, random))
                         return;
                     else
-                        DamageEnemy(Direction.Down, 20, 6, random);
+                        DamageEnemy(Direction.Down, MoveInterval*2, 6, random);
                     break;
                 case Direction.Right:
-                    if (DamageEnemy(direction, 20, 6, random))
+                    if (DamageEnemy(direction, MoveInterval*2, 6, random))
                         return;
-                    else if (DamageEnemy(Direction.Down, 20, 6, random))
+                    else if (DamageEnemy(Direction.Down, MoveInterval*2, 6, random))
                         return;
-                    else if (DamageEnemy(Direction.Left, 20, 6, random))
+                    else if (DamageEnemy(Direction.Left, MoveInterval*2, 6, random))
                         return;
                     else
-                        DamageEnemy(Direction.Up, 20, 6, random);
+                        DamageEnemy(Direction.Up, MoveInterval*2, 6, random);
                     break;
                 case Direction.Down:
-                    if (DamageEnemy(direction, 20, 6, random))
+                    if (DamageEnemy(direction, MoveInterval*2, 6, random))
                         return;
-                    else if (DamageEnemy(Direction.Left, 20, 6, random))
+                    else if (DamageEnemy(Direction.Left, MoveInterval*2, 6, random))
                         return;
-                    else if (DamageEnemy(Direction.Up, 20, 6, random))
+                    else if (DamageEnemy(Direction.Up, MoveInterval*2, 6, random))
                         return;
                     else
-                        DamageEnemy(Direction.Right, 20, 6, random);
+                        DamageEnemy(Direction.Right, MoveInterval*2, 6, random);
                     break;
                 default:
                     break;

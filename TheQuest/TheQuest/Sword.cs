@@ -20,36 +20,36 @@ namespace TheQuest
             switch (direction)
             {
                 case Direction.Up:
-                    if (DamageEnemy(direction, 10, 3, random))
+                    if (DamageEnemy(direction, MoveInterval, 3, random))
                         return;
-                    else if (DamageEnemy(Direction.Right, 10, 3, random))
+                    else if (DamageEnemy(Direction.Right, MoveInterval, 3, random))
                         return;
                     else
-                        DamageEnemy(Direction.Left, 10, 3, random);
+                        DamageEnemy(Direction.Left, MoveInterval, 3, random);
                     break;
                 case Direction.Left:
-                    if (DamageEnemy(direction, 10, 3, random))
+                    if (DamageEnemy(direction, MoveInterval, 3, random))
                         return;
-                    else if (DamageEnemy(Direction.Up, 10, 3, random))
+                    else if (DamageEnemy(Direction.Up, MoveInterval, 3, random))
                         return;
                     else
-                        DamageEnemy(Direction.Down, 10, 3, random);
+                        DamageEnemy(Direction.Down, MoveInterval, 3, random);
                     break;
                 case Direction.Right:
-                    if (DamageEnemy(direction, 10, 3, random))
+                    if (DamageEnemy(direction, MoveInterval, 3, random))
                         return;
-                    else if (DamageEnemy(Direction.Down, 10, 3, random))
+                    else if (DamageEnemy(Direction.Down, MoveInterval, 3, random))
                         return;
                     else
-                        DamageEnemy(Direction.Up, 10, 3, random);
+                        DamageEnemy(Direction.Up, MoveInterval, 3, random);
                     break;
                 case Direction.Down:
-                    if (DamageEnemy(direction, 10, 3, random))
+                    if (DamageEnemy(direction, MoveInterval, 3, random))
                         return;
-                    else if (DamageEnemy(Direction.Left, 10, 3, random))
+                    else if (DamageEnemy(Direction.Left, MoveInterval, 3, random))
                         return;
                     else
-                        DamageEnemy(Direction.Right, 10, 3, random);
+                        DamageEnemy(Direction.Right, MoveInterval, 3, random);
                     break;
                 default:
                     break;

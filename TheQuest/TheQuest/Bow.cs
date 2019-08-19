@@ -17,7 +17,7 @@ namespace TheQuest
 
         public override void Attack(Direction direction, Random random)
         {
-            DamageEnemy(direction, 30, 1, random);
+            DamageEnemy(direction, MoveInterval*3, 1, random);
         }
     }
 }

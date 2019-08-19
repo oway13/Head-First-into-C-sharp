@@ -9,7 +9,7 @@ namespace TheQuest
 {
     abstract class Mover
     {
-        private const int MoveInterval = 10;
+        public const int MoveInterval = 25;
         protected Point location;
         public Point Location { get { return location; } }
         protected Game game;

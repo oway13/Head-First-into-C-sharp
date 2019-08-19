@@ -9,13 +9,20 @@ namespace TheQuest
 {
     class BluePotion : Weapon, IPotion
     {
-        private Game game;
-        private Point point;
-
-        public BluePotion(Game game, Point point)
+        public BluePotion(Game game, Point location) : base(game, location)
         {
-            this.game = game;
-            this.point = point;
+            used = false;
+        }
+
+        public override string Name {get{ return "blue potion"; } }
+
+        private bool used;
+        public bool Used { get{ return used; } }
+
+        public override void Attack(Direction direction, Random random)
+        {
+            game.IncreasePlayerHealth(5, random);
+            used = true;
         }
     }
 }

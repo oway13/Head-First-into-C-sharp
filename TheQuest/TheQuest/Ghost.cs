@@ -16,9 +16,9 @@ namespace TheQuest
         public override void Move(Random random)
         {
             if (random.Next(2) == 0)
-                base.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
+                location = base.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
 
-            if (base.Nearby(game.PlayerLocation, 10) && HitPoints > 0)
+            if (base.Nearby(game.PlayerLocation, MoveInterval) && HitPoints > 0)
                 game.HitPlayer(3, random);
         }
     }
