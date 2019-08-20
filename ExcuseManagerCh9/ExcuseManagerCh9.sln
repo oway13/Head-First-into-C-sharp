@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcuseManagerCh9", "ExcuseManagerCh9\ExcuseManagerCh9.csproj", "{11BC5437-E783-4638-81D8-0B169ED296D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11BC5437-E783-4638-81D8-0B169ED296D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11BC5437-E783-4638-81D8-0B169ED296D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11BC5437-E783-4638-81D8-0B169ED296D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11BC5437-E783-4638-81D8-0B169ED296D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31864044-5CDC-424E-B60D-D8B60B971B93}
+	EndGlobalSection
+EndGlobal
