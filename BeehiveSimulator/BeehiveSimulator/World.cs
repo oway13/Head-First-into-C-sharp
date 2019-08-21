@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BeehiveSimulator
 {
+    [Serializable]
     class World
     {
         public World(BeeMessage messageSender)

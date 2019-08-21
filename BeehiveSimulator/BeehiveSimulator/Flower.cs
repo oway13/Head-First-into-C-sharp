@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BeehiveSimulator
 {
+    [Serializable]
     class Flower
     {
         public Flower(Point Location, Random random)

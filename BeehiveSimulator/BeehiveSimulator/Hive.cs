@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BeehiveSimulator
 {
+    [Serializable]
     class Hive
     {
         public Hive(World world, BeeMessage MessageSender)
@@ -29,6 +30,7 @@ namespace BeehiveSimulator
         private const int MaxBees = 8;
         private const double BirthCost = 4;
 
+        [NonSerialized]
         public BeeMessage MessageSender;
 
         public double Honey { get; private set; }

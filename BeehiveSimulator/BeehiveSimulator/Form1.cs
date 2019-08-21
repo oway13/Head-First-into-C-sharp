@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace BeehiveSimulator
 {
@@ -104,6 +106,80 @@ namespace BeehiveSimulator
                     timer1.Enabled = false;
                 }
             }
+        }
+
+        private void openToolStripButton_Click(object sender, EventArgs e)
+        {
+            World currentWorld = world;
+            int currentFramesRun = framesRun;
+
+            bool enabled = timer1.Enabled;
+            if (enabled)
+                timer1.Stop();
+
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Filter = "Simulator File (*.bees)|*.bees";
+            openDialog.CheckFileExists = true;
+            openDialog.CheckPathExists = true;
+            openDialog.Title = "Choose a file with a simulation to load";
+            if(openDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using(Stream input = File.OpenRead(openDialog.FileName))
+                    {
+                        BinaryFormatter bf = new BinaryFormatter();
+                        world = (World)bf.Deserialize(input);
+                        framesRun = (int)bf.Deserialize(input);
+                    }
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to read the simulator file\r\n" + ex.Message, "Bee Simulator Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    world = currentWorld;
+                    framesRun = currentFramesRun;
+                }
+            }
+            world.Hive.MessageSender = new BeeMessage(SendMessage);
+            foreach (Bee bee in world.Bees)
+                bee.MessageSender = new BeeMessage(SendMessage);
+            if (enabled)
+                timer1.Start();
+        }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+            bool enabled = timer1.Enabled;
+            if (enabled)
+                timer1.Stop();
+
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "Simulator File (*.bees)|*.bees";
+            saveDialog.CheckPathExists = true;
+            saveDialog.Title = "Choose a file to save the current simulation";
+            if(saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (Stream output = File.Create(saveDialog.FileName))
+                    {
+                        BinaryFormatter bf = new BinaryFormatter();
+                        bf.Serialize(output, world);
+                        bf.Serialize(output, framesRun);
+                    }
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to save the simulator file\r\n" + ex.Message, "Bee Simulator Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+            if (enabled)
+                timer1.Start();
+            
+        }
+
+        private void printToolStripButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

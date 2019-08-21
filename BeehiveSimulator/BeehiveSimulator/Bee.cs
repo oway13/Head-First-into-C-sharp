@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BeehiveSimulator
 {
+    [Serializable]
     class Bee
     {
         public Bee(int id, Point location, World world, Hive hive)
@@ -33,6 +34,7 @@ namespace BeehiveSimulator
         public bool InsideHive { get; private set; }
         public double NectarCollected { get; private set; }
 
+        [NonSerialized]
         public BeeMessage MessageSender;
 
         private Point location;
