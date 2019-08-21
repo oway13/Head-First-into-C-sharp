@@ -33,6 +33,8 @@ namespace BeehiveSimulator
         public bool InsideHive { get; private set; }
         public double NectarCollected { get; private set; }
 
+        public BeeMessage MessageSender;
+
         private Point location;
         public Point Location { get { return location; } }
 
@@ -44,6 +46,7 @@ namespace BeehiveSimulator
         public void Go(Random random)
         {
             Age++;
+            BeeState oldState = CurrentState;
             switch (CurrentState)
             {
                 case BeeState.Idle:
@@ -117,8 +120,9 @@ namespace BeehiveSimulator
                     break;
                 case BeeState.Retired:
                     break;
-                
             }
+            if (oldState != CurrentState && MessageSender != null)
+                MessageSender(ID, CurrentState.ToString());
         }
 
         private bool MoveTowardsLocation(Point destination)

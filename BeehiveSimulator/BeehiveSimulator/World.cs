@@ -9,14 +9,14 @@ namespace BeehiveSimulator
 {
     class World
     {
-        public World()
+        public World(BeeMessage messageSender)
         {
             Bees = new List<Bee>();
             Flowers = new List<Flower>();
             Random random = new Random();
             for (int i = 0; i < 10; i++)
                 AddFlower(random);
-            Hive = new Hive(this);
+            Hive = new Hive(this, messageSender);
         }
 
         private const double NectarHarvestedPerNewFlower = 50;

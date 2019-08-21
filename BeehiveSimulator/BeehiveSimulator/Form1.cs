@@ -21,7 +21,7 @@ namespace BeehiveSimulator
         public Form1()
         {
             InitializeComponent();
-            world = new World();
+            world = new World(new BeeMessage(SendMessage));
 
             timer1.Interval = 50;
             timer1.Tick += new EventHandler(RunFrame);
@@ -41,7 +41,7 @@ namespace BeehiveSimulator
             FramesRun.Text = framesRun.ToString();
             double milliSeconds = frameDuration.TotalMilliseconds;
             if (milliSeconds != 0.0)
-                FrameRate.Text = string.Format("{(0:f0)} ({1:f1}ms)", 1000 / milliSeconds, milliSeconds);
+                FrameRate.Text = string.Format("{0:f0} ({1:f1}ms)", 1000 / milliSeconds, milliSeconds);
             else
                 FrameRate.Text = "N/A";
         }
@@ -73,9 +73,15 @@ namespace BeehiveSimulator
         private void reset_Click(object sender, EventArgs e)
         {
             framesRun = 0;
-            world = new World();
+            world = new World(new BeeMessage(SendMessage));
             if (!timer1.Enabled)
                 startSim.Text = "Start Simulation";
+            UpdateStats(new TimeSpan);
+        }
+
+        private void SendMessage(int ID, string Message)
+        {
+            statusStrip1.Items[0].Text = "Bee #" + ID + ": " + Message;
         }
     }
 }
