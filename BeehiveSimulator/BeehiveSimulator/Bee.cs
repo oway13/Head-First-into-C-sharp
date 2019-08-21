@@ -51,13 +51,32 @@ namespace BeehiveSimulator
                     {
                         CurrentState = BeeState.Retired;
                     }
-                    else
+                    else if (world.Flowers.Count > 0 && hive.ConsumeHoney(HoneyConsumed))
                     {
-                        //TODO: What to do when Idle
+                        Flower flower = world.Flowers[random.Next(world.Flowers.Count)];
+                        if(flower.Nectar >= MinimumFlowerNectar && flower.Alive)
+                        {
+                            destinationFlower = flower;
+                            CurrentState = BeeState.FlyingToFlower;
+                        }
                     }
                     break;
                 case BeeState.FlyingToFlower:
-                    //TODO: Move Towards Flower
+                    if (!world.Flowers.Contains(destinationFlower))
+                        CurrentState = BeeState.ReturningToHive;
+                    else if (InsideHive)
+                    {
+                        if (MoveTowardsLocation(hive.GetLocation("Exit")))
+                        {
+                            InsideHive = false;
+                            location = hive.GetLocation("Entrance");
+                        }
+                    }
+                    else
+                    {
+                        if (MoveTowardsLocation(destinationFlower.Location))
+                            CurrentState = BeeState.GatheringNectar;
+                    }
                     break;
                 case BeeState.GatheringNectar:
                     double nectar = destinationFlower.HarvestNectar();
@@ -69,11 +88,16 @@ namespace BeehiveSimulator
                 case BeeState.ReturningToHive:
                     if (!InsideHive)
                     {
-                        //TODO: Move Towards Hive
+                        if (MoveTowardsLocation(hive.GetLocation("Entrance")))
+                        {
+                            InsideHive = true;
+                            location = hive.GetLocation("Exit");
+                        }
                     }
                     else
                     {
-                        //TODO: Change Bee State
+                        if (MoveTowardsLocation(hive.GetLocation("HoneyFactory")))
+                            CurrentState = BeeState.MakingHoney;
                     }
                     break;
                 case BeeState.MakingHoney:
@@ -85,6 +109,10 @@ namespace BeehiveSimulator
                     else
                     {
                         //TODO: Turn nectar into Honey
+                        if (hive.AddHoney(0.5))
+                            NectarCollected -= 0.5;
+                        else
+                            NectarCollected = 0;
                     }
                     break;
                 case BeeState.Retired:
