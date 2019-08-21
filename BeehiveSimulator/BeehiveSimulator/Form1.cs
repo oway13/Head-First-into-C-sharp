@@ -76,12 +76,34 @@ namespace BeehiveSimulator
             world = new World(new BeeMessage(SendMessage));
             if (!timer1.Enabled)
                 startSim.Text = "Start Simulation";
-            UpdateStats(new TimeSpan);
+            UpdateStats(new TimeSpan());
         }
 
         private void SendMessage(int ID, string Message)
         {
             statusStrip1.Items[0].Text = "Bee #" + ID + ": " + Message;
+            var beeGroups =
+                from bee in world.Bees
+                group bee by bee.CurrentState into beeGroup
+                orderby beeGroup.Key
+                select beeGroup;
+            listBox1.Items.Clear();
+            foreach(var group in beeGroups)
+            {
+                string s;
+                if (group.Count() == 1)
+                    s = "";
+                else
+                    s = "s";
+                listBox1.Items.Add(group.Key.ToString() + ": " + group.Count() + " bee" + s);
+                if(group.Key == BeeState.Idle && group.Count() == world.Bees.Count() && framesRun > 0)
+                {
+                    listBox1.Items.Add("Simulation ended: all bees are idle");
+                    toolStrip1.Items[0].Text = "Simulation Ended";
+                    statusStrip1.Items[0].Text = "Simulation Ended";
+                    timer1.Enabled = false;
+                }
+            }
         }
     }
 }

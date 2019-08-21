@@ -49,6 +49,7 @@
             this.NectarInFlowers = new System.Windows.Forms.Label();
             this.FramesRun = new System.Windows.Forms.Label();
             this.FrameRate = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -61,7 +62,7 @@
             this.reset});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(228, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(220, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -89,17 +90,17 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 153);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 257);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(228, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(220, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(105, 17);
+            this.toolStripStatusLabel1.Text = "Simulation Paused";
             // 
             // tableLayoutPanel1
             // 
@@ -238,11 +239,21 @@
             this.FrameRate.TabIndex = 11;
             this.FrameRate.Text = "FrameRate";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(0, 149);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.listBox1.Size = new System.Drawing.Size(221, 108);
+            this.listBox1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(228, 175);
+            this.ClientSize = new System.Drawing.Size(220, 279);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
@@ -280,6 +291,7 @@
         private System.Windows.Forms.Label FramesRun;
         private System.Windows.Forms.Label FrameRate;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
