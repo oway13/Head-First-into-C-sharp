@@ -9,9 +9,9 @@ namespace BeehiveSimulator
 {
     class Hive
     {
-        public Hive()
+        public Hive(World world)
         {
-            
+            this.world = world;
             Honey = InitialHoney;
             InitializeLocations();
             Random random = new Random();
@@ -31,6 +31,7 @@ namespace BeehiveSimulator
         public double Honey { get; private set; }
         private Dictionary<string, Point> locations;
         private int beeCount;
+        private World world;
 
         public void InitializeLocations()
         {
@@ -43,22 +44,40 @@ namespace BeehiveSimulator
 
         public bool AddHoney(double Nectar)
         {
-            throw new NotImplementedException();
+            double honeyToAdd = Nectar * NectarToHoney;
+            if (honeyToAdd + Honey > MaxHoney)
+                return false;
+            Honey += honeyToAdd;
+            return true;
         }
 
         public bool ConsumeHoney(double amount)
         {
-            throw new NotImplementedException();
+            if (amount > Honey)
+                return false;
+            else
+            {
+                Honey -= amount;
+                return true;
+            }
         }
 
         public void AddBee(Random random)
         {
-            throw new NotImplementedException();
+            beeCount++;
+            int r1 = random.Next(100) - 50;
+            int r2 = random.Next(100) - 50;
+            Point startPoint = new Point(locations["Nursery"].X + r1,
+                                         locations["Nursery"].Y + r2);
+            Bee newBee = new Bee(beeCount, startPoint, world, this);
+            world.Bees.Add(newBee);
         }
 
         public void Go(Random random)
         {
-            throw new NotImplementedException();
+            if (Honey > BirthCost && random.Next(10) == 1 && world.Bees.Count < MaxBees)
+                AddBee(random);
+
         }
 
         public Point GetLocation(string location)

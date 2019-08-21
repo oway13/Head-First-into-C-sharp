@@ -9,7 +9,7 @@ namespace BeehiveSimulator
 {
     class Bee
     {
-        public Bee(int id, Point location)
+        public Bee(int id, Point location, World world, Hive hive)
         {
             this.ID = id;
             Age = 0;
@@ -18,12 +18,15 @@ namespace BeehiveSimulator
             destinationFlower = null;
             NectarCollected = 0;
             CurrentState = BeeState.Idle;
+            this.world = world;
+            this.hive = hive;
         }
 
         private const double HoneyConsumed = 0.5;
         private const int MoveRate = 3;
         private const double MinimumFlowerNectar = 1.5;
         private const int CareerSpan = 1000;
+
 
         public BeeState CurrentState { get; private set; }
         public int Age{ get; private set; }
@@ -33,6 +36,8 @@ namespace BeehiveSimulator
         private Point location;
         public Point Location { get { return location; } }
 
+        private World world;
+        private Hive hive;
         private int ID;
         private Flower destinationFlower;
 
