@@ -46,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bee.cs" />
+    <Compile Include="BeeControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BeeMessage.cs" />
     <Compile Include="BeeState.cs" />
     <Compile Include="Flower.cs" />
@@ -70,6 +73,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,6 +87,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee animation 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee animation 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee animation 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee animation 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hive %28inside%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hive %28outside%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
