@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,21 +10,18 @@ using System.Windows.Forms;
 
 namespace BeehiveSimulator
 {
-    class BeeControl : PictureBox
+    public partial class BeeControl : UserControl
     {
         public BeeControl()
         {
-            animationTimer.Tick += new EventHandler(animationTimer_Tick);
-            animationTimer.Interval = 150;
-            animationTimer.Start();
+            InitializeComponent();
             BackColor = System.Drawing.Color.Transparent;
             BackgroundImageLayout = ImageLayout.Stretch;
         }
 
-        private Timer animationTimer = new Timer();
         private int cell = 0;
 
-        void animationTimer_Tick(object sender, EventArgs e)
+        private void animationTimer_Tick(object sender, EventArgs e)
         {
             cell++;
             switch (cell)
@@ -47,16 +47,5 @@ namespace BeehiveSimulator
                     break;
             }
         }
-
-        protected override void Dispose(bool disposing)
-        {
-            base.Dispose(disposing);
-            if (disposing)
-            {
-                animationTimer.Dispose();
-            }
-        }
-
-
     }
 }
