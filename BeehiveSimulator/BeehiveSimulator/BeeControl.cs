@@ -12,6 +12,11 @@ namespace BeehiveSimulator
 {
     partial class BeeControl : UserControl
     {
+        public BeeControl()
+        {
+            InitializeComponent();
+            ResizeCells();
+        }
 
         private int cell = 0;
 
@@ -21,25 +26,40 @@ namespace BeehiveSimulator
             switch (cell)
             {
                 case 1:
-                    BackgroundImage = Properties.Resources.Bee_animation_1;
+                    BackgroundImage = cells[0];
                     break;
                 case 2:
-                    BackgroundImage = Properties.Resources.Bee_animation_2;
+                    BackgroundImage = cells[1];
                     break;
                 case 3:
-                    BackgroundImage = Properties.Resources.Bee_animation_3;
+                    BackgroundImage = cells[2];
                     break;
                 case 4:
-                    BackgroundImage = Properties.Resources.Bee_animation_4;
+                    BackgroundImage = cells[3];
                     break;
                 case 5:
-                    BackgroundImage = Properties.Resources.Bee_animation_3;
+                    BackgroundImage = cells[2];
                     break;
                 default:
-                    BackgroundImage = Properties.Resources.Bee_animation_2;
+                    BackgroundImage = cells[1];
                     cell = 0;
                     break;
             }
+        }
+
+        private Bitmap[] cells = new Bitmap[4];
+        private void ResizeCells()
+        {
+            cells[0] = Renderer.ResizeImage(Properties.Resources.Bee_animation_1, Width, Height);
+            cells[1] = Renderer.ResizeImage(Properties.Resources.Bee_animation_2, Width, Height);
+            cells[2] = Renderer.ResizeImage(Properties.Resources.Bee_animation_3, Width, Height);
+            cells[3] = Renderer.ResizeImage(Properties.Resources.Bee_animation_4, Width, Height);
+        }
+
+
+        private void BeeControl_Resize(object sender, EventArgs e)
+        {
+            ResizeCells();
         }
     }
 }

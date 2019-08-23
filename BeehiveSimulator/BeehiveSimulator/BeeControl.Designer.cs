@@ -45,6 +45,7 @@
             this.Name = "BeeControl";
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Resize += new System.EventHandler(this.BeeControl_Resize);
             this.ResumeLayout(false);
 
         }
