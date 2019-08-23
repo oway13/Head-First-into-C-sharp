@@ -10,14 +10,8 @@ using System.Windows.Forms;
 
 namespace BeehiveSimulator
 {
-    public partial class BeeControl : UserControl
+    partial class BeeControl : UserControl
     {
-        public BeeControl()
-        {
-            InitializeComponent();
-            BackColor = System.Drawing.Color.Transparent;
-            BackgroundImageLayout = ImageLayout.Stretch;
-        }
 
         private int cell = 0;
 

@@ -22,7 +22,7 @@ namespace BeehiveSimulator {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class BeeControl {
+    internal partial class BeeControl {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -57,16 +57,6 @@ namespace BeehiveSimulator {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=17,Y=17}.
-        /// </summary>
-        internal static System.Drawing.Point animationTimer_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("animationTimer.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
             }
         }
     }

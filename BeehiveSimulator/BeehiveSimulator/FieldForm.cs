@@ -19,7 +19,7 @@ namespace BeehiveSimulator
 
         private void FieldForm_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show(e.Location.ToString());
+            //MessageBox.Show(e.Location.ToString());
         }
     }
 }
