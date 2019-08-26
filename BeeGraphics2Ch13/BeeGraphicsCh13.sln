@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeeGraphicsCh13", "BeeGraphicsCh13\BeeGraphicsCh13.csproj", "{B9879238-A1B9-4A4D-AFCD-377E786574A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9879238-A1B9-4A4D-AFCD-377E786574A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9879238-A1B9-4A4D-AFCD-377E786574A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9879238-A1B9-4A4D-AFCD-377E786574A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9879238-A1B9-4A4D-AFCD-377E786574A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7401F768-2416-405A-B73D-20B73F80A980}
+	EndGlobalSection
+EndGlobal
