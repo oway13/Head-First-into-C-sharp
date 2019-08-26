@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeehiveSimulator", "BeehiveSimulator\BeehiveSimulator.csproj", "{CAEF1DF7-4C79-44B6-89E2-09C18CEA4ABB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAEF1DF7-4C79-44B6-89E2-09C18CEA4ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAEF1DF7-4C79-44B6-89E2-09C18CEA4ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAEF1DF7-4C79-44B6-89E2-09C18CEA4ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAEF1DF7-4C79-44B6-89E2-09C18CEA4ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {281ED1C2-A64C-467F-8D9D-79EA72BA7C65}
+	EndGlobalSection
+EndGlobal
