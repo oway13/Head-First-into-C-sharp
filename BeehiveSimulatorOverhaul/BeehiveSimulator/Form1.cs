@@ -204,5 +204,10 @@ namespace BeehiveSimulator
         {
 
         }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            renderer.AnimateBees();
+        }
     }
 }

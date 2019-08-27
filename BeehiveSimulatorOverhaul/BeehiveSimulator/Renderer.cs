@@ -50,65 +50,6 @@ namespace BeehiveSimulator
             BeeAnimationSmall[3] = ResizeImage(Properties.Resources.Bee_animation_4, 20, 20);
         }
 
-        //public void Reset()
-        //{
-        //    foreach (PictureBox flower in flowerLookup.Values)
-        //    {
-        //        fieldForm.Controls.Remove(flower);
-        //        flower.Dispose();
-        //    }
-        //    foreach (BeeControl bee in beeLookup.Values)
-        //    {
-        //        hiveForm.Controls.Remove(bee);
-        //        fieldForm.Controls.Remove(bee);
-        //        bee.Dispose();
-        //    }
-        //    flowerLookup.Clear();
-        //    beeLookup.Clear();
-        //}
-
-
-        //private void MoveBeeFromHiveToField(BeeControl beeControl)
-        //{
-        //    hiveForm.Controls.Remove(beeControl);
-        //    beeControl.Size = new Size(20, 20);
-        //    fieldForm.Controls.Add(beeControl);
-        //    beeControl.BringToFront();
-        //}
-
-        //private void MoveBeeFromFieldToHive(BeeControl beeControl)
-        //{
-        //    fieldForm.Controls.Remove(beeControl);
-        //    beeControl.Size = new Size(40, 40);
-        //    hiveForm.Controls.Add(beeControl);
-        //    beeControl.BringToFront();
-        //}
-
-        //private BeeControl GetBeeControl(Bee bee)
-        //{
-        //    BeeControl beeControl;
-        //    if (!beeLookup.ContainsKey(bee))
-        //    {
-        //        beeControl = new BeeControl() { Width = 40, Height = 40 };
-        //        beeLookup.Add(bee, beeControl);
-        //        hiveForm.Controls.Add(beeControl);
-        //        beeControl.BringToFront();
-        //    }
-        //    else
-        //        beeControl = beeLookup[bee];
-        //    return beeControl;
-        //}
-
-        //private void RemoveRetiredBeesAndDeadFlowers()
-        //{
-        //    foreach (Bee bee in retiredBees)
-        //        beeLookup.Remove(bee);
-        //    retiredBees.Clear();
-        //    foreach (Flower flower in deadFlowers)
-        //        flowerLookup.Remove(flower);
-        //    deadFlowers.Clear();
-        //}
-
         public static Bitmap ResizeImage(Bitmap picture, int width, int height)
         {
             Bitmap resizedPicture = new Bitmap(width, height);
